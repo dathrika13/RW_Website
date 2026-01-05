@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- meta tags -->
+    <meta name="description" content="AI Copilot ESG Enterprise Platform" />
+    <meta
+      name="keywords"
+      content="ESG, Environment Social Governance, Sustainability, GRI, CSRD, TCFD, BRSR, Decarbonization, Supplier Assessment, Sustainability Disclosure, Environmental Health and Safety, NetZero, Carbon Offset"
+    />
+
+    <!-- meta tags -->
+    <title>Redwoods | AI-native End-to-end Sustainability Platform </title>
+    <meta content="Redwoods" name="author" />
+    <meta
+      content="AI Copilot ESG SaaS Platform for Enterprises. We enable companies to lead their net zero transformation journey"
+      name="description"
+    />
+
+    <base href="/" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets//images/Redwoods Favicon_32 x 32.svg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 
+	<link rel="preload" as="image" href="assets/videos/1.webp">
+	<link rel="preload" as="image" href="assets/videos/2.webp">
+	<link rel="preload" as="image" href="assets/videos/3.webp"> -->
+
+    <style>
+      .zsiq_floatmain.zsiq_theme1.siq_bR {
+        display: none !important;
+      }
+
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f5f6f9;
+        font-family: "Montserrat", arial, sans-serif;
+      }
+
+      #loading {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        /* background-color: #fff */
+      }
+
+      .msg {
+        color: #757575;
+        font: 20px/20px Arial, sans-serif;
+        letter-spacing: 0.2px;
+        text-align: center;
+      }
+
+      #nlpt {
+        animation: a-s 0.5s 2.5s 1 forwards;
+        background-color: #e0dede;
+        height: 4px;
+        margin: 56px auto 20px;
+        opacity: 0;
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+      }
+
+      #nlpt::before {
+        animation: a-lb 20s 3s linear forwards;
+        background-color: #1890ff;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transform: translateX(-300px);
+        width: 100%;
+      }
+
+      @keyframes a-lb {
+        0% {
+          transform: translateX(-300px);
+        }
+
+        5% {
+          transform: translateX(-240px);
+        }
+
+        15% {
+          transform: translateX(-30px);
+        }
+
+        25% {
+          transform: translateX(-30px);
+        }
+
+        30% {
+          transform: translateX(-20px);
+        }
+
+        45% {
+          transform: translateX(-20px);
+        }
+
+        50% {
+          transform: translateX(-15px);
+        }
+
+        65% {
+          transform: translateX(-15px);
+        }
+
+        70% {
+          transform: translateX(-10px);
+        }
+
+        95% {
+          transform: translateX(-10px);
+        }
+
+        100% {
+          transform: translateX(-5px);
+        }
+      }
+
+      @keyframes a-s {
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes a-h {
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes a-nt {
+        100% {
+          transform: none;
+        }
+      }
+
+      @keyframes a-e {
+        43% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          transform: scale(0.75);
+        }
+
+        60% {
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+          transform: translateY(-16px);
+        }
+
+        77% {
+          animation-timing-function: cubic-bezier(0.16, 0, 0.2, 1);
+          transform: none;
+        }
+
+        89% {
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+          transform: translateY(-5px);
+        }
+
+        100% {
+          transform: none;
+        }
+      }
+
+      @keyframes a-ef {
+        24% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.6, 1);
+          transform: scaleY(0.42);
+        }
+
+        52% {
+          animation-timing-function: cubic-bezier(0.63, 0, 0.2, 1);
+          transform: scaleY(0.98);
+        }
+
+        83% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.84, 1);
+          transform: scaleY(0.96);
+        }
+
+        100% {
+          transform: none;
+        }
+      }
+
+      @keyframes a-efs {
+        24% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.6, 1);
+          opacity: 0.3;
+        }
+
+        52% {
+          animation-timing-function: cubic-bezier(0.63, 0, 0.2, 1);
+          opacity: 0.03;
+        }
+
+        83% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.84, 1);
+          opacity: 0.05;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes a-es {
+        24% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.6, 1);
+          transform: rotate(-25deg);
+        }
+
+        52% {
+          animation-timing-function: cubic-bezier(0.63, 0, 0.2, 1);
+          transform: rotate(-42.5deg);
+        }
+
+        83% {
+          animation-timing-function: cubic-bezier(0.8, 0, 0.84, 1);
+          transform: rotate(-42deg);
+        }
+
+        100% {
+          transform: rotate(-43deg);
+        }
+      }
+
+      .invfr {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        border: 0;
+      }
+
+      .msgb {
+        position: absolute;
+        right: 0;
+        font-size: 12px;
+        font-weight: normal;
+        color: #000;
+        padding: 20px;
+      }
+
+      .redwood-logo-mark {
+        margin-top: 17px;
+        display: inline-block;
+        width: 110px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position-y: 6px;
+        background-position-x: 1px;
+        background-size: 100px;
+        background-image: url("data:image/png;base64,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");
+      }
+    </style>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  </head>
+
+  <body style="position: relative" class="mat-typography">
+    <rw-root>
+      <!-- loading layout replaced by app after startupp -->
+      <div id="loading">
+        <div
+          style="
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+          "
+        >
+          <div
+            style="
+              animation: a-h 0.5s 1.25s 1 linear forwards,
+                a-nt 0.6s 1.25s 1 cubic-bezier(0, 0, 0.2, 1);
+              background: rgb(238, 238, 238);
+              border-radius: 50%;
+              height: 800px;
+              left: 50%;
+              margin: -448px -400px 0;
+              position: absolute;
+              top: 50%;
+              transform: scale(0);
+              width: 800px;
+            "
+          ></div>
+        </div>
+        <div style="height: 100%; text-align: center">
+          <div style="height: 50%; margin: 0 0 -140px"></div>
+          <div
+            style="
+              height: 60px;
+              margin: 0 auto;
+              position: relative;
+              width: 176px;
+            "
+          >
+            <div
+              style="
+                animation: a-s 0.5s 0.5s 1 linear forwards,
+                  a-e 1.75s 0.5s 1 cubic-bezier(0, 0, 0.67, 1) forwards;
+                opacity: 0;
+                transform: scale(0.68);
+              "
+            >
+              <div
+                style="
+                  background: #fcfcfc;
+                  border-radius: 12px;
+                  box-shadow: 0 15px 15px -15px rgba(0, 168, 235, 0.33);
+                  height: 70px;
+                  left: 0;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  transform: scale(1);
+                  width: 180px;
+                "
+              >
+                <span class="redwood-logo-mark"></span>
+              </div>
+            </div>
+          </div>
+          <div id="nlpt"></div>
+          <div
+            style="animation: a-s 0.25s 1.25s 1 forwards; opacity: 0"
+            class="msg"
+          >
+            Loading&hellip;
+          </div>
+        </div>
+      </div>
+    </rw-root>
+
+    <script async type="application/javascript" src="./assets/zoho.js"></script>
+    <script type="text/javascript" async>
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "siq52457170f38bbebb181b41826d0ed8fd9002e2fbddeb50fbfdb20a5fbf5b5aa2",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FQGCPFHNQ6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      // gtag("config", "G-FQGCPFHNQ6");
+    </script>
+  </body>
+</html>

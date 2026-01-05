@@ -1,0 +1,23 @@
+.address-container {
+    // border: 1px solid;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.address-container>div:last-child {
+    // border-left: 1px solid #000;
+}
+
+.address-container>div {
+    padding: 8px;
+}
+
+.office-img {
+    width: 450px;
+}
+
+@media (max-width: 768px) {
+    .office-img {
+        width: 100%;
+    }
+}

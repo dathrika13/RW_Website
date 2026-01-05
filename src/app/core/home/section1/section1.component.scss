@@ -1,0 +1,110 @@
+.downloadButton {
+  background-color: rgb(255, 16, 16);
+  color: white;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 1px;
+}
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.video-container {
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Added text shadow */
+}
+
+.hero-title {
+  color: white;
+  font-weight: 600;
+  font-size: 50px; /* Adjust as needed */
+  font-family: "Be Vietnam Pro", sans-serif;
+  line-height: 1.3;
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Added text shadow */
+}
+
+.img-carousel {
+  height: 800px;
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-carousel {
+    width: 100%;
+    min-height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .img-carousel {
+    width: 100%;
+    object-fit: cover;
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .img-carousel {
+    width: 100%;
+    object-fit: cover;
+    min-height: 600px;
+  }
+}
+
+.hero-description {
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.8; /* Increase line height for better readability */
+  font-size: 20px; /* Increase font size */
+}
+
+.img-carousel {
+  height: 800px;
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+}
+.downloadButton {
+  background-color: #28a745; /* Bootstrap 'btn-success' green */
+  color: white !important; /* Ensure text is white */
+  text-transform: uppercase;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 4px; /* Rounded corners */
+  letter-spacing: 1px;
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Ensure button styling */
+}
+
+.downloadButton:hover {
+  background-color: #218838; /* Darker green on hover */
+  color: white; /* Ensure text remains white on hover */
+}

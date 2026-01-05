@@ -1,0 +1,121 @@
+.LogosContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    
+}
+.logoSize{
+    height: 30px;
+    margin: 10px;
+    
+}
+.logoSize1{
+    height: 60px;
+    margin: 10px;
+}
+.logoSize2{
+    
+    height: 110px;
+    margin: 10px;
+}
+.container-img {
+    height: 300px;
+    max-width: 700px; 
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f9fa;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+.video-container video {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    border: 2px solid #ddd; /* Light border around the video */
+    border-radius: 8px; /* Optional rounded corners */
+    background-color: #f9f9f9; /* Background color behind the video */
+    padding: 8px; /* Space between the video and the border */
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  .video-container video:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+
+  /* Adjust the space between card rows and subsequent sections */
+.row.justify-content-center.mt-5 {
+    margin-bottom: 2rem; /* Reduce bottom margin between card rows and next text */
+  }
+  
+  /* Adjust margin for the "Agentic AI framework" heading */
+  h2.display-5.fw-medium {
+    margin-top: 1.5rem; /* Reduce top margin for better alignment */
+    margin-bottom: 1.5rem; /* Add consistency in spacing */
+  }
+  
+  .btn {
+    font-size: 14px; /* Smaller font size */
+    padding: 6px 12px; /* Reduced padding */
+    margin: 0 4px; /* Slight margin between buttons */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  .btn-success,
+  .btn-secondary {
+    min-width: 100px; /* Ensure consistent width */
+  }
+
+  .card {
+    min-height: 400px; /* Adjust as needed to accommodate content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .text-content {
+    flex-grow: 1; /* Push buttons to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align features to the top */
+    text-align: left; /* Ensures consistent alignment */
+    margin-bottom: -5px; /* Adjust gap between paragraph and features */
+    min-height: 100px;
+  }
+  
+  
+  .text-content p {
+    margin-bottom: 0px; /* Reduces spacing between paragraph and heading */
+  }
+  
+  .text-content h5 {
+    margin-top: 0px; /* Adjusts heading position */
+  }
+  /* Align Key Features */
+.list-unstyled {
+  margin-top: auto; /* Pushes Key Features list to the bottom */
+}
+
+  /* Align buttons horizontally */
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    
+  }
+
+  .heading-padding {
+    padding: 0px -15px; 
+    line-height: 1.6; /* Improve readability */
+  }

@@ -1,0 +1,63 @@
+<section
+  class="overflow-hidden pb-lg-1 position-relative pt-lg-4 py-1 px-2 px-sm-0"
+  data-aos="fade-up"
+  data-aos-duration="500"
+>
+  <div class="container">
+    <div class="container col-lg-12" id="whitepaper">
+      <div class="row">
+        <!-- Card 1 -->
+        <!-- <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of whitepapers">
+          <a
+            class="nav-link top-nav-link-ref"
+            [routerLink]="'/page/download-whitepaper'"
+            fragment="{{item.id}}"
+          >
+            <div class="card">
+              <div class="card-body">
+                <img
+                  alt="Your Image"
+                  class="img-fluid"
+                  loading="lazy"
+                  style="width: 350px; height: 190px; object-fit: contain;"
+                  [src]="item.image"
+                />
+                <h6 class="mt-1 ">{{item.updatedAt}}</h6>
+                <h4 class="card-text mt-1">{{item.title}}</h4>
+                <a class="mt-1" [routerLink]="'/page/contact'">Download</a>
+              </div>
+            </div>
+          </a>
+        </div> -->
+      </div>
+    </div>
+    <div class="container col-lg-12 mt-3" id="news-events">
+      <h3 style="font-size: 1.6rem; line-height: 1.4;">News/Events</h3>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of hires">
+          <a
+            class="nav-link top-nav-link-ref"
+            [routerLink]='[item.link, item.id]'
+
+          >
+          <!-- fragment="{{item.id}}" -->
+            <div class="card">
+              <div class="card-body">
+                <img
+                  alt="Your Image"
+                  class="img-fluid"
+                  loading="lazy"
+                  style="width: 350px; height: 200px; object-fit: cover;"
+                  [src]="item.image"
+                />
+                <h6 class="mt-1">{{item.updatedAt}}</h6>
+                <h4 class="card-text">{{item.title}}</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

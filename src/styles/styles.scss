@@ -1,0 +1,113 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$redwoods-website-primary: mat.define-palette(mat.$indigo-palette);
+$redwoods-website-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$redwoods-website-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$redwoods-website-theme: mat.define-light-theme((
+  color: (
+    primary: $redwoods-website-primary,
+    accent: $redwoods-website-accent,
+    warn: $redwoods-website-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($redwoods-website-theme);
+
+// FONTS
+@import "scss/custom/fonts";
+
+//CORE FILES
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "scss/skins/variables";
+@import "scss/skins/custom-variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// general
+@import "scss/custom/general";
+
+// components
+@import "scss/components/accordions";
+@import "scss/components/alerts";
+@import "scss/components/badge";
+@import "scss/components/backgrounds";
+@import "scss/components/breadcrumb";
+@import "scss/components/buttons";
+@import "scss/components/card";
+@import "scss/components/dropdown";
+@import "scss/components/forms";
+@import "scss/components/modal";
+@import "scss/components/navbar";
+@import "scss/components/nav";
+@import "scss/components/pagination";
+@import "scss/components/popover";
+@import "scss/components/progress";
+@import "scss/components/reboot";
+@import "scss/components/tables";
+@import "scss/components/type";
+@import "scss/components/helper";
+@import "scss/components/list";
+@import "scss/components/widgets";
+@import "scss/components/custom-checkbox";
+@import "scss/components/custom-radio";
+@import "scss/components/print";
+@import "scss/components/preloader";
+@import "scss/components/carousel"; //carousel
+
+// // custom plugins
+// // @import "scss/custom/plugins/rateit";
+// // @import "scss/custom/plugins/gallery";
+// // @import "scss/custom/plugins/daterange";
+// // @import "scss/custom/plugins/leaflet";
+// // @import "scss/custom/plugins/jarallex";
+// // @import "scss/custom/plugins/swiper"; //swiper
+@import "scss/custom/plugins/aos"; //aos
+
+// structure
+@import "scss/custom/structure/sidenav";
+@import "scss/custom/structure/footer";
+
+// custom components
+@import "scss/custom/components/icons";
+@import "scss/custom/components/avatar";
+@import "scss/custom/components/ribbon";
+
+// theme components
+@import "scss/custom/components/header";
+@import "scss/custom/components/hero";
+@import "scss/custom/components/features";
+@import "scss/custom/components/testimonials";
+
+// pages
+@import "scss/custom/pages/docs";
+@import "scss/custom/pages/portfolio";
+@import "scss/custom/pages/pagenotfound";
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

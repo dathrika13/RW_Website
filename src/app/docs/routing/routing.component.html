@@ -1,0 +1,54 @@
+<div class="card" id="customization">
+    <div class="card-body">
+        <h4 class="my-0">Routing</h4>
+        <p>Redwood.ai Angular is having routing setup based on <a href="https://angular.io/guide/router"
+                target="_blank">Angular-Router</a>.
+            The pre configured routing would make your job easy when dealing with any
+            routing related changes. The routing is setup in a way to support <a
+                href="https://angular.io/guide/lazy-loading-ngmodules">lazy loading</a> as
+            well.
+        </p>
+        <p>You can easily add, change or remove any route by simply making changes described
+            below:
+        </p>
+
+        <div>
+            <ol>
+                <li>
+                    <p>Enable routing in the project using <code>--routing</code> while creating
+                        project.</p>
+                </li>
+                <li>
+                    <p>
+                        Add the entry for component in
+                        main application routing
+                        <code>src/app/app-routing.module.ts</code> E.g.
+                    </p>
+                    <p><code>
+                       {{'{'}}<br />
+                            path: 'docs',<br/>
+                            canActivate: [AuthGuard],<br />
+                            loadChildren: () => import('./docs/docs.module').then(m => m.DocsModule) //to load lazily<br />
+                            or<br />
+                            component: DocsComponent <br />
+
+                        {{'}'}}
+                      </code>
+                    </p>
+                    <p>Each of these properties are explained below:</p>
+                    <ul>
+                        <li><strong>path</strong> - relative path to component</li>
+                        <li><strong>loadChildren</strong> - module to load on this route</li>
+                        <li><strong>component</strong> - component to load on this route</li>
+                        <li><strong>canActivate</strong> - set of Guards which decides whether route can
+                            be actiavted or not. It restrict the non authenticated user to access this
+                            module.</li>
+                    </ul>
+
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,137 @@
+<section class="pt-5 pb-4 bg-gradient2 position-relative px-2 px-sm-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-sm-6">
+        <div class="text-md-start text-center">
+          <a class="navbar-brand me-lg-4 mb-4 me-auto d-flex align-items-center pt-0" [routerLink]="['/home']">
+            <img loading="lazy" src="assets/images/logo.png" class="mx-sm-0 mx-auto" height="30" alt="" />
+          </a>
+        </div>
+        <div class="text-md-start">
+          <p class="text-muted">
+            Guiding Businesses Towards a Legacy of Sustainability and Positive Impact
+          </p>
+        </div>
+        <div>
+          <div class="d-flex align-items-start">
+            <i data-feather="map-pin" class="icon-dual-secondary"></i>
+            <div class="flex-grow-1">
+              <a [routerLink]="['.']" class="text-muted fw-normal h5 my-0 px-2">
+                Redwoods AI Inc <br />
+                405 Boulder Court, Suite 800<br />
+                Pleasanton, CA 94566
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mt-2">
+            <i data-feather="mail" class="icon-dual-secondary"></i>
+            <div class="flex-grow-1">
+              <a href="mailto:info@redwoods.ai" class="text-muted fw-normal h5 my-0 px-2">info@redwoods.ai</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-sm-3 col-6">
+        <div class="ps-xl-4">
+          <h6 class="mb-3 mt-3 mt-sm-2 fs-14 fw-semibold text-uppercase">Resources</h6>
+          <ul class="list-unstyled">
+            <li class="my-3">
+              <a [routerLink]="['home']" fragment="blogs" target="_self" class="text-muted">Articles</a>
+            </li>
+            <li class="my-3">
+              <a [routerLink]="['home']" fragment="news-events" target="_self" class="text-muted">News/Events</a>
+            </li>
+            <!-- <li class="my-3">
+              <a [routerLink]="['home']" fragment="whitepaper" target="_self" class="text-muted">Whitepapers</a>
+            </li> -->
+            <li class="my-3">
+              <a [routerLink]="'/page/terms-of-services'" class="text-muted">GDPR/Privacy</a>
+            </li>
+            <!-- <li class="my-3">
+              <a [routerLink]="'/page/privacy-policy'" class="text-muted">Privacy Policy</a>
+            </li> -->
+            <!-- <li class="my-3">
+              <a [routerLink]="'/page/faq'" class="text-muted">FAQ</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="col-xl-2 col-sm-3 col-6">
+        <div class="ps-xl-4">
+          <h6 class="mb-3 mt-3 mt-sm-2 fs-14 fw-semibold text-uppercase">Policies</h6>
+          <ul class="list-unstyled">
+            <li class="my-3">
+              <a [routerLink]="'/page/terms-of-services'" class="text-muted">GDPR Compliance</a>
+            </li>
+            <li class="my-3">
+              <a [routerLink]="'/page/privacy-policy'" class="text-muted">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+      <div class="col-xl-2 col-sm-3 col-6">
+        <div class="ps-xl-4">
+          <h6 class="mb-3 mt-3 mt-sm-2 fs-14 fw-semibold text-uppercase">Company</h6>
+          <ul class="list-unstyled">
+            <li class="my-3">
+              <a [routerLink]="'/page/company'" class="text-muted">About Us</a>
+            </li>
+            <li class="my-3">
+              <a [routerLink]="'/page/contact'" class="text-muted">Contact</a>
+            </li>
+            <li class="my-3">
+              <a [routerLink]="'/page/careers'" class="text-muted">Careers</a>
+            </li>
+            <li class="my-3">
+              <a [routerLink]="'/page/partners'" class="text-muted">Partners</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row text-md-start text-center">
+      <div class="col-md-8">
+        <p class="pb-0 mb-0 text-muted">
+          {{ today | date : "yyyy" }} © Redwoods.ai. All rights reserved.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <div class="align-items-end mt-md-0 mt-4">
+          <ul class="list-unstyled mb-0">
+            <li class="d-inline-block me-4">
+              <a href="https://www.facebook.com/profile.php?id=61552790319082" target="_blank">
+                <img src="assets/images/all/facebook.svg" /></a>
+            </li>
+            <li class="d-inline-block me-4">
+              <a href="https://twitter.com/RedwoodsAI" target="_blank">
+                <img src="assets/images/all/twitter.svg" /></a>
+            </li>
+            <li class="d-inline-block">
+              <a href="https://www.linkedin.com/company/redwoodsai/" target="_blank">
+                <img src="assets/images/all/linkedin.svg" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="cookie-banner"
+    class="position-fixed bottom-0 left-0 w-100"
+    style="min-height: 150px; background-color: rgb(47, 45, 45); z-index: 2247483647; left: 0;"
+    [ngClass]="userConsent ? 'd-none' : 'd-flex'"
+  >
+    <div class="d-flex flex-column p-4 mt-2 text-white">
+      <h1>Cookies</h1>
+      <p>
+        We use cookies and similar technologies to help personalise content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.
+      </p>
+      <div class="d-flex flex-row-reverse me-8">
+        <button (click)="onReject()" class="btn bg-secondary text-white ms-4">Decline</button>
+        <button (click)="onAccept()" class="btn btn-success">Accept</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,292 @@
+<ul class="navbar-nav align-items-lg-center" [class]="navClass" id="top-menu">
+    <!-- <li class="nav-item">
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/home'" routerLinkActive="active">Home</a>
+    </li> -->
+    <!-- <li class="nav-item">
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/page/products'" routerLinkActive="active">Platform</a>
+    </li> -->
+
+    <li class="nav-item dropdown" ngbDropdown #productsDrop="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" (click)="productsDrop.toggle();"
+            id="navbarLandings" [class.active]="isActive('/page/products')">
+            Products<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <ul class="dropdown-menu dropdown p-2" [class.show]="productsDrop.isOpen()">
+            <li class="mb-2 p-1">
+                <a tabindex="-1" [routerLink]="'/page/products-ai'">AI Agents</a>
+            </li>
+            <li class="mb-2 p-1 position-relative ai-item" style="position: relative !important;">
+                <a tabindex="-1" [routerLink]="'/page/products'">Enterprise Sustainability Platform </a>
+                <!-- <div class="position-absoulute sub-menu">
+                    <ul>
+                        <li class="mb-2"><a tabindex="-1" [routerLink]="'/page/products'">Streamline</a></li>
+                        <li class="mb-2"><a tabindex="-1" [routerLink]="'/page/products'">Measure</a></li>
+                        <li class="mb-2"><a tabindex="-1" [routerLink]="'/page/products'">Accelerate</a></li>
+                        <li class="mb-2"><a tabindex="-1" [routerLink]="'/page/products'">Report</a></li>
+                        <li class="mb-2"><a tabindex="-1" [routerLink]="'/page/products'">Transform</a></li>
+                    </ul>
+                </div> -->
+            </li>
+            <li class="mb-2 p-1">
+                <a tabindex="-1" [routerLink]="'/page/supplier-portal'">Supplier Sustainability Portal</a>
+            </li>
+            <!-- <li class="mb-2 p-1">
+                <a tabindex="-1" [routerLink]="'/page/product-solutions'">Solutions</a>
+            </li> -->
+            <!-- <li><a tabindex="-1" href="#">HTML</a></li>
+            <li><a tabindex="-1" href="#">CSS</a></li>  -->
+            <!-- <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+            </li> -->
+        </ul>
+    </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/page/product-solutions'" [class.active]="isActive('/page/solutions')">
+            Solutions
+        </a>
+    </li> -->
+    <!-- <li class="nav-item dropdown" ngbDropdown #solutionDropdown="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)"
+            (click)="solutionDropdown.toggle();" id="navbarLandings" [class.active]="isActive('/page/solutions')">
+            Solutions<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div class="dropdown-menu dropdown" [class.show]="solutionDropdown.isOpen()" aria-labelledby="navbarLandings">
+            <div class="row mx-0">
+                <div class="col-md-12 p-lg-0">
+                    <label class="nav-title fw-semibold fs-14 text-dark text-uppercase mb-3">Services</label>
+
+                    <div class="d-flex">
+                        <ul class="nav">
+                            <ng-container *ngFor="let item of solutions;">
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link top-nav-link-ref" [routerLink]="'/page/solutions'"
+                                        fragment="{{item.toLowerCase()}}" aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                {{ item }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li> -->
+    <li class="nav-item dropdown" ngbDropdown #landingDropIndustries="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)"
+            (click)="landingDropIndustries.toggle();" id="navbarLandings" [class.active]="isActive('/page/industries')">
+            Sectors<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg" [class.show]="landingDropIndustries.isOpen()"
+            aria-labelledby="navbarLandings">
+            <div class="row mx-0">
+                <div class="col-md-12 p-lg-0">
+                    <!-- <label class="nav-title fw-semibold fs-14 text-dark text-uppercase mb-3">Services</label> -->
+
+                    <div class="d-flex">
+                        <ul class="nav">
+                            <ng-container *ngFor="let item of industriesContent; even as isEven">
+                                <li class="nav-item" *ngIf="isEven">
+                                    <a class="nav-link top-nav-link-ref" [routerLink]="['/page/industries', item.id]"
+                                         aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                {{ item.name }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ng-container>
+                        </ul>
+                        <ul class="nav" style="border-left: solid 1px rgb(224, 224, 224);">
+                            <ng-container *ngFor="let item of industriesContent; odd as isOdd">
+                                <li class="nav-item" *ngIf="isOdd">
+                                    <a class="nav-link top-nav-link-ref" [routerLink]="['/page/industries', item.id]"
+                                        aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                {{ item.name }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/page/pricing'" routerLinkActive="active">Pricing</a>
+    </li>
+
+    <!-- <li class="nav-item dropdown" ngbDropdown #resourcesDrop="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" (click)="resourcesDrop.toggle();"
+            id="navbarLandings" [class.active]="isActive('/page/resources')">
+            Resources<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <ul class="dropdown-menu dropdown p-2" [class.show]="resourcesDrop.isOpen()">
+            <li class="mb-2 p-1 position-relative ai-item" style="position: relative !important;">
+                <a tabindex="-1" [routerLink]="'/page/resource-blogs'">Blogs </a>
+        </ul>
+    </li> -->
+    <li class="nav-item dropdown" ngbDropdown #companyDrop="ngbDropdown">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" (click)="companyDrop.toggle();"
+            id="navbarLandings" [class.active]="isActive('/page/company')">
+            Company<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div class="dropdown-menu dropdown" [class.show]="companyDrop.isOpen()" aria-labelledby="navbarLandings">
+            <div class="row mx-0">
+                <div class="col-md-12 p-lg-0">
+                    <!-- <label class="nav-title fw-semibold fs-14 text-dark text-uppercase mb-3">Services</label> -->
+
+                    <div class="d-flex">
+                        <ul class="nav">
+                            <ng-container *ngFor="let item of companyItems;">
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link top-nav-link-ref" [routerLink]="item.link"
+                                        (click)="onClickCompanyItem(item)" aria-labelledby="navbarLandings">
+                                        <div class="d-flex align-items-center cursor-pointer">
+                                            <div class="flex-grow-1" style="cursor: pointer;">
+                                                {{ item.name}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+
+
+
+    <!--Multi Level Dropdown Menu-->
+    <!--Start-->
+    <!-- <li class="nav-item dropdown" ngbDropdown #pagesDrop="ngbDropdown" [autoClose]="false">
+        <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="navbarPages"
+            (click)="pagesDrop.toggle()" [class.active]="isActive('/pages')">
+            Pages<i data-feather="chevron-down" class="d-inline-block icon icon-xxs ms-1 mt-lg-0 mt-1"></i>
+        </a>
+        <div aria-labelledby="navbarPages" class="dropdown-menu" [class.show]="pagesDrop.isOpen() ">
+            <ul class="nav">
+                <li class="nav-item dropdown" ngbDropdown #accountDrop="ngbDropdown" autoClose="inside">
+                    <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="accountPages"
+                        (click)="accountDrop.toggle()" [class.active]="isActive('/pages/account')">
+                        Account
+                        <div class="arrow"></div>
+                    </a>
+                    <div aria-labelledby="accountPages" class="dropdown-menu" [class.show]="accountDrop.isOpen()">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/account/dashboard'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/account/settings'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" ngbDropdown #blogDrop="ngbDropdown" autoClose="inside">
+                    <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="blogPages"
+                        (click)="blogDrop.toggle()" [class.active]="isActive('/pages/blog')">
+                        Blog
+                        <div class="arrow"></div>
+                    </a>
+                    <div aria-labelledby="blogPages" class="dropdown-menu" [class.show]="blogDrop.isOpen()">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/blog'"
+                                    routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+                                    aria-labelledby="blogPages">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/blog/post'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="blogPages">Blog Post</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <hr class="my-2" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/company'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/contact'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/career'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Career</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/pricing'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Pricing</a>
+                </li>
+                <li class="nav-item dropdown" ngbDropdown #portfolioDrop="ngbDropdown" autoClose="inside">
+                    <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" id="portfolioPages"
+                        (click)="portfolioDrop.toggle()" [class.active]="isActive('/pages/portfolio')">
+                        Portfolio
+                        <div class="arrow"></div>
+                    </a>
+                    <div aria-labelledby="portfolioPages" class="dropdown-menu" [class.show]="portfolioDrop.isOpen()">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/portfolio/grid'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="portfolioPages">Portfolio
+                                    Grid</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/portfolio/masonry'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="portfolioPages">Portfolio Masonry</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/portfolio/item'"
+                                    [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                                    aria-labelledby="portfolioPages">Portfolio
+                                    Item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <hr class="my-2" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link top-nav-link-ref" [routerLink]="'/pages/help'" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}" aria-labelledby="navbarPages">Help</a>
+                </li>
+            </ul>
+        </div>
+    </li> -->
+    <!--End-->
+
+    <!-- <ng-container>
+        <li class="nav-item">
+            <a class="btn nav-link me-2 shadow-none text-start" [routerLink]="['/auth/login']"
+                *ngIf="!loggedInUser">Login</a>
+            <a class="btn nav-link me-2 shadow-none text-start" [routerLink]="['/auth/logout']"
+                *ngIf="loggedInUser">Logout</a>
+        </li>
+    </ng-container> -->
+
+    <li class="nav-item ms-2">
+        <a class="btn" [href]="demoUrl" [class]="ctaButtonClass" (click)="RequestDemo()">Request Demo </a>
+    </li>
+</ul>

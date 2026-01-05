@@ -1,0 +1,55 @@
+<rw-section1></rw-section1>
+<rw-section2></rw-section2>
+<rw-section3></rw-section3>
+<rw-section4></rw-section4>
+<rw-section5></rw-section5>
+<rw-section6></rw-section6>
+
+<!-- Modal Trigger (Optional) -->
+<!-- Example Button to Manually Test Modal -->
+
+
+<!-- Modal Content -->
+<!-- Modal Template -->
+<ng-template #unsubscribeModal>
+    <div class="modal-header">
+      <h5 class="modal-title">Unsubscribe</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modalService.dismissAll()"></button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="unsubscribe()" #unsubscribeForm="ngForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Enter your email to unsubscribe</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            [(ngModel)]="email"
+            name="email"
+            required
+            email
+            #emailField="ngModel"
+          />
+          <div *ngIf="emailField.invalid && emailField.touched" class="text-danger">
+            Please enter a valid email address.
+          </div>
+          <div *ngIf="errorMessage" class="text-danger">
+            This email is already unsubscribed.
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modalService.dismissAll()">Cancel</button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        [disabled]="unsubscribeForm.invalid"
+        (click)="unsubscribe()"
+      >
+        Unsubscribe
+      </button>
+    </div>
+  </ng-template>
+  
+  

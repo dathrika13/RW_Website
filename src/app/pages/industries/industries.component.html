@@ -1,0 +1,81 @@
+<section class="pt-7 pt-sm-5 pb-sm-6 bg-gradient7 position-relative">
+    <div class="container position-relative zindex-1">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center">
+                <h2 class="fw-semibold d-inline-block text-dark"
+                    style="font-size: 2.5rem; line-height: 1.4; padding-left: 2rem;">
+                    Redwoods AI delivers <span class="highlight highlight-success d-inline-block">customized</span>
+                    solutions
+                    tailored to your organization's specific performance requirements.
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div _ngcontent-rjj-c130="" class="divider bottom d-none d-sm-block"></div>
+</section>
+
+<section class="position-relative overflow-hidden hero-7 pb-8" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h1 class="text-left text-dark mb-3" style="font-size: 2rem;">
+                    The {{ industries.name }} Sector
+                </h1> 
+                <p class="fs-3 text-muted mt-0 mb-0">
+                    {{ industries.description }}
+                </p>
+            </div>
+            <!-- Image -->
+            <div class="col-lg-6 text-center text-lg-end">
+                <img loading="lazy" class="rounded-lg" width="600" [src]="industries.image"
+                    alt="{{ industries.name }}" />
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <!-- Industries Column -->
+            <div class="col-lg-6 mb-4">
+                <h2 class="fw-bold highlight highlight-success d-inline-block text-dark mb-4"
+                    style="font-size: 2.5rem; line-height: 1.4; padding-left: 2rem;">
+                    Industries
+                </h2>
+                <ul class="list-inline">
+                    <li class="list-inline-item d-flex align-items-center mb-3"
+                        *ngFor="let item of industries?.additionalContent">
+                        <img [src]="industries.icon" alt="Icon" width="28" class="me-2 mt-1" />
+                        <p class="fs-3 text-muted mb-0">
+                            {{ item }}
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="row mt-6">
+                    <div class="col text-left">
+                        <a class="btn btn-success me-2" [href]="demoUrl" style=" font-size: 1.3rem; padding: 12px 24px; border-radius: 8px; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); "> Request demo </a>
+                        <a [routerLink]="'/page/contact'">
+                            <button class="btn btn-secondary"
+                              style="font-size: 1.3rem; padding: 12px 24px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">
+                              Learn More
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Focus Areas Column -->
+            <div class="col-lg-6">
+                <h2 class="fw-bold highlight highlight-success d-inline-block text-dark mb-4"
+                    style="font-size: 2.5rem; line-height: 1.4; padding-left: 2rem;">
+                    Key Focus Areas
+                </h2>
+                <ul class="list-unstyled">
+                    <li class="list-unstyled-item mb-3" *ngFor="let note of industries?.data">
+                        <p class="fs-3 text-muted mb-0">
+                            {{ note }}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

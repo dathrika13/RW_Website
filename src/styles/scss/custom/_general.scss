@@ -1,0 +1,36 @@
+.content {
+    padding-top: 7rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+hr { 
+   background-color: #495057;
+   clear:both;
+   display:block;
+   height: 1px;
+   width: 100%;
+}
+
+.navbar-collapse.collapse {
+    display: none;
+}
+
+.lh-xxl {
+   line-height: 2.5 !important;
+}
+
+.home-main-content {
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ngx-typed-highlight {
+    background-color: #a4eac0;
+    padding: 5px;
+}

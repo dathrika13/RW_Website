@@ -1,0 +1,18 @@
+<div style="min-height: 70px">
+  <rw-header
+    navClass="navbar-light"
+    ctaButtonClass="btn-success btn-sm"
+    [fixedWidth]="true"
+    [sticky]="true"
+    [hideMenu]="hideMenu"
+  ></rw-header>
+</div>
+<router-outlet></router-outlet>
+<rw-footer></rw-footer>
+<a
+  class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top"
+  href="javascript:void(0)"
+  appScrollToTop
+>
+  <i class="icon-xxs" data-feather="arrow-up"></i>
+</a>

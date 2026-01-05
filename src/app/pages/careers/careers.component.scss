@@ -1,0 +1,18 @@
+.apply-container {
+    background: #7A9C7D;
+}
+
+.career-image {
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+
+    .career-image {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,271 @@
+// .pricing-container {
+//     display: flex;
+//     align-items: center;
+//     // justify-content: space-between;
+//     margin-top: 100px;
+//     // border: 1px solid black;
+//     border-radius: 8px;
+//     justify-content: center;
+//     flex-wrap: wrap;
+// }
+// .addons-container
+// {
+// display: flex;
+// }
+// .addons-items
+// {
+// border-radius: 10px;
+// margin-top: 8px;
+// }
+
+.items-container {
+    // border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+// .pricing-item {
+//     // border-left: 1px solid black;
+//     padding: 16px;
+//     // min-width: 300px;
+//     width: 400px;
+//     // height: 700px;
+//     height: auto;
+//     // max-width: 400px;
+//     // margin-left: auto;
+//     margin: 0 auto;
+//     border: 2px solid;
+//     border-radius: 12px;
+// }
+
+.title {
+    margin-left: 10px;
+    width: 100px;
+    writing-mode: vertical-lr;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.number-of-users {
+    font-size: 14px;
+    writing-mode: vertical-lr;
+    margin-left: 10px;
+
+}
+
+.recommended-plan {
+    font-size: 12px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+// .pricing-item {
+//     text-align: center;
+//     // height: 100%;
+//     align-self: flex-start;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.pricing-item>button {
+    margin: 8px 0;
+}
+
+.pricing-item>h3 {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.features {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.features>* {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.features>*::before {
+    // content: "✔";
+    color: green;
+    margin-right: 5px;
+}
+
+.basic-features {
+    font-weight: 400 !important;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.users-container {
+    margin-top: auto;
+}
+
+.item-value {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.users-details {
+    display: flex;
+    align-items: flex-start;
+    // justify-content: space-between;
+}
+
+.add-ons {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+}
+
+.add-on {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.users-details .pricing-item {
+    margin: auto;
+}
+
+// .premium-container {
+//     transform: scale(1.1);
+//     border-color: #3cd278;
+//     position: relative;
+//     // border-left: 1px solid;
+//     // border-right: 1px solid;
+// }
+
+.no-check::before {
+    content: "" !important;
+}
+
+// .premium-container::before {
+//     content: "Recommended";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     font-size: 18px;
+//     margin-right: 25px;
+//     font-style: italic;
+//     // margin-top: -12px;
+//     // margin-left: 100px;
+//     font-weight: bolder;
+//     background: rgb(2, 0, 36);
+//     background: linear-gradient(90deg, rgba(2, 0, 36, 0.8085828081232493) 8%, rgba(6, 97, 78, 1) 43%, rgba(9, 121, 113, 1) 74%, rgba(0, 212, 255, 1) 100%);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+
+.recommended {
+    font-size: 18px;
+    font-style: italic;
+    // margin-top: -12px;
+    // margin-left: 100px;
+    font-weight: bolder;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.8085828081232493) 8%, rgba(6, 97, 78, 1) 43%, rgba(9, 121, 113, 1) 74%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// @media (max-width: 768px){
+//     .premium-container {
+//         transform: scale(1);
+//         margin: 50px 0;
+//     }
+// }
+
+.pricing-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center; /* Centers the items horizontally */
+    margin-top: 100px;
+    border-radius: 8px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 16px; /* Adds spacing between items */
+}
+
+.pricing-item {
+    flex: 1 1 calc(30% - 16px); /* Adjusts the width to fit three items in a row */
+    max-width: 30%; /* Prevents items from getting too wide */
+    padding: 16px;
+    height: auto;
+    margin: 0;
+    border: 2px solid;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.premium-container {
+    transform: scale(1.05);
+    border-color: #3cd278;
+    position: relative;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 1200px) {
+    .pricing-item {
+        flex: 1 1 calc(45% - 16px); /* Adjusts to two items per row */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-item {
+        flex: 1 1 calc(100% - 16px); /* Stacks items vertically */
+        max-width: 100%;
+    }
+
+    .premium-container {
+        transform: scale(1); /* Removes the scaling effect on smaller screens */
+        margin: 50px 0;
+    }
+}
+.add-ons-container {
+    display: flex;
+    justify-content: center; /* Centers the boxes horizontally */
+    align-items: center; /* Aligns the boxes vertically */
+    gap: 30px; /* Adds spacing between the two boxes */
+    flex-wrap: wrap; /* Ensures responsive wrapping for smaller screens */
+    margin-top: 24px;
+}
+
+.add-ons-container .pricing-item {
+    flex: 1 1 45%; /* Ensures each box takes 45% of the container width */
+    max-width: 38%; /* Prevents boxes from getting too wide */
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .add-ons-container .pricing-item {
+        flex: 1 1 90%; /* Adjusts to 90% width for smaller screens */
+        max-width: 90%;
+    }
+}
+
+.btn-container a, .btn-container button {
+    width: 100%; /* Makes the buttons take the full width of the parent container */
+    display: block; /* Ensures buttons behave like block elements */
+}
